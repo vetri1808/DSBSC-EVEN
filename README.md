@@ -26,11 +26,62 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/736bef01-c500-4225-85e4-92c4e2fdf692" />
 
 Program
+```
+clc;
+clear;
+close;
+
+// Parameters
+Am = 9;        // Message amplitude
+Ac = 18;        // Carrier amplitude
+fm = 326;      // Message frequency (Hz)
+fc = 3260;     // Carrier frequency (Hz)
+fs = 32600;    // Sampling frequency (Hz)
+
+// Time vector
+t = 0:1/fs:0.05;
+
+// Message signal
+m = Am * sin(2*%pi*fm*t);
+
+// Carrier signal
+c = Ac * sin(2*%pi*fc*t);
+
+// DSB-SC modulation
+dsb_sc = m .* c;
+
+// Plotting
+subplot(3,1,1)
+plot(t, m)
+title("Message Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+subplot(3,1,2)
+plot(t, c)
+title("Carrier Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+subplot(3,1,3)
+plot(t, dsb_sc)
+title("DSB-SC Modulated Signal")
+xlabel("Time")
+ylabel("Amplitude")
+
+```
 
 Output Graph
+<img width="2879" height="1489" alt="EXP2" src="https://github.com/user-attachments/assets/0c4d0f55-e424-4c8b-83f0-6d936493b186" />
+
 
 Tablular Column
+![WhatsApp Image 2026-04-07 at 11 38 10 AM](https://github.com/user-attachments/assets/d90d474c-1844-4340-9e17-32c7a8c5d0f7)
+
 
 Result
+![WhatsApp Image 2026-04-07 at 11 38 31 AM](https://github.com/user-attachments/assets/190ca11c-2d2f-4a28-b301-9f6ba5fcf476)
+
+
 
 Thus the DSB-SC-AM Modulation and Demodulation is generated.
