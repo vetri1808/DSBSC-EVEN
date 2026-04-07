@@ -32,11 +32,11 @@ clear;
 close;
 
 // Parameters
-Am = 9;        // Message amplitude
-Ac = 18;        // Carrier amplitude
-fm = 326;      // Message frequency (Hz)
-fc = 3260;     // Carrier frequency (Hz)
-fs = 32600;    // Sampling frequency (Hz)
+Am = 17.5;        // Message amplitude
+Ac = 35;        // Carrier amplitude
+fm = 626;      // Message frequency (Hz)
+fc = 6260;     // Carrier frequency (Hz)
+fs = 62600;    // Sampling frequency (Hz)
 
 // Time vector
 t = 0:1/fs:0.05;
